@@ -48,6 +48,7 @@
           </p>
           <div class="actions">
             <a class="btn primary" href="#oss">Open-source work</a>
+            <a class="btn ghost" href="#agent-desk">The loop that writes it</a>
             <a class="btn ghost" href="Gyanu_Resume_Exp.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           </div>
           <div class="socials">
@@ -175,38 +176,47 @@
         <p class="eyebrow">Open source</p>
         <h2>Merged patches in the stacks agents actually use.</h2>
         <p class="section-lead">
-          HITL resume, spec-driven workflows, MCP auth, retrieval routers, inference caches. Each change has a test.
+          A tool-loop on this repo searches GitHub, ranks agent/MCP/RAG/inference patches, and writes the list below. Expand the run to see the tools it called.
         </p>
+        <!-- maintainer:oss -->
         <ul class="oss-list">
           <li>
             <a href="https://github.com/ag-ui-protocol/ag-ui/pull/2715" target="_blank" rel="noopener noreferrer">AG-UI</a>
-            <span>Mastra resume emits the <code>TOOL_CALL</code> triple before <code>RESULT</code>, so the client still has the tool</span>
+            <span>Emit <code>TOOL_CALL</code> triple before <code>RESULT</code> on resume of a suspended tool.</span>
           </li>
           <li>
-            <a href="https://github.com/github/spec-kit/pull/4401" target="_blank" rel="noopener noreferrer">Spec Kit</a>
-            <span>Drop the unused <code>scope</code> input from the bundled SDD workflow. Clarifications edit the artifact in place.</span>
+            <a href="https://github.com/github/spec-kit/pull/4402" target="_blank" rel="noopener noreferrer">Spec Kit</a>
+            <span>Resolve assess clarifications by editing artifacts in place.</span>
           </li>
           <li>
             <a href="https://github.com/punkpeye/fastmcp/pull/358" target="_blank" rel="noopener noreferrer">FastMCP</a>
-            <span>Send <code>WWW-Authenticate</code> on 401 when <code>authenticate()</code> fails with no OAuth config</span>
+            <span>Emit <code>WWW-Authenticate</code> on 401 when <code>authenticate()</code> fails with no OAuth config.</span>
           </li>
           <li>
             <a href="https://github.com/deepset-ai/haystack/pull/12624" target="_blank" rel="noopener noreferrer">Haystack</a>
-            <span>Type routers reject reserved output names instead of failing later</span>
+            <span>Raise a clear error when type routers reuse reserved output names.</span>
           </li>
           <li>
-            <a href="https://github.com/ml-explore/mlx-lm/pull/1777" target="_blank" rel="noopener noreferrer">mlx-lm</a>
-            <span>Prefill tokens reach logits processors. Rebind <code>BatchKVCache</code> offset instead of mutating it.</span>
+            <a href="https://github.com/ml-explore/mlx-lm/pull/1848" target="_blank" rel="noopener noreferrer">mlx-lm</a>
+            <span>Rebind <code>BatchKVCache</code> offset instead of mutating in place.</span>
           </li>
           <li>
-            <a href="https://github.com/benoitc/gunicorn/pull/3715" target="_blank" rel="noopener noreferrer">Gunicorn</a>
-            <span>Stop writing a 500 over a response that already started</span>
+            <a href="https://github.com/Chainlit/chainlit/pull/3017" target="_blank" rel="noopener noreferrer">Chainlit</a>
+            <span>Fail CI when a <code>pnpm.overrides</code> pin is declared but never applied.</span>
           </li>
           <li>
             <a href="https://github.com/pydantic/logfire/pull/2308" target="_blank" rel="noopener noreferrer">Logfire</a>
-            <span>Tail sampling keeps the buffer until every span in the trace has ended</span>
+            <span>Keep tail-sampling buffers until every span in the trace has ended.</span>
           </li>
         </ul>
+        <!-- /maintainer:oss -->
+        <aside class="agent-desk" id="agent-desk">
+          <button class="agent-desk-toggle" type="button" aria-expanded="false" aria-controls="agent-trace">
+            <span class="agent-desk-label">Maintainer loop</span>
+            <span class="agent-desk-meta" id="agent-desk-meta">loading last run…</span>
+          </button>
+          <ol class="agent-trace" id="agent-trace" hidden></ol>
+        </aside>
         <p class="oss-more">
           <a href="https://github.com/search?q=is%3Apr+author%3Agyanu2507+is%3Amerged&type=pullrequests" target="_blank" rel="noopener noreferrer">All merged pull requests →</a>
         </p>
@@ -218,6 +228,22 @@
         <p class="eyebrow">Projects</p>
         <h2>Agents, retrieval, and the serving path.</h2>
         <div class="project-grid">
+          <article class="project-card">
+            <header>
+              <span class="pill">Agent · this site</span>
+              <span class="year">2026</span>
+            </header>
+            <h3>Maintainer loop</h3>
+            <p>The open-source list above is not typed by hand. A planner with GitHub search, rank, and HTML patch tools writes it and leaves a JSON trace.</p>
+            <ul>
+              <li>Runs against live merged PRs. Agent/MCP/RAG/inference stacks go first.</li>
+              <li>The page loads <code>agent/last-run.json</code> and shows every tool call from the last run.</li>
+            </ul>
+            <footer>
+              <a href="https://github.com/gyanu2507/portfolio-gyanu/blob/main/agent/maintainer.py" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="#agent-desk">Last run</a>
+            </footer>
+          </article>
           <article class="project-card">
             <header>
               <span class="pill">Agent · MCP</span>

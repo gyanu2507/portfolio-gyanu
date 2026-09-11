@@ -423,6 +423,62 @@ button:focus-visible {
   color: #8ecbff;
 }
 
+.agent-desk {
+  margin-top: 28px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.agent-desk-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+  padding: 18px 24px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.agent-desk-label {
+  font-weight: 700;
+  color: var(--heading);
+}
+
+.agent-desk-meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.agent-trace {
+  margin: 0;
+  padding: 0 24px 20px;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid var(--panel-border);
+  padding-top: 16px;
+}
+
+.agent-trace li {
+  display: grid;
+  grid-template-columns: minmax(140px, 200px) 1fr;
+  gap: 12px 20px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.agent-trace code {
+  color: #9ad9ff;
+  font-size: 0.88em;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -764,7 +820,8 @@ button:focus-visible {
 }
 
 @media (max-width: 640px) {
-  .oss-list li {
+  .oss-list li,
+  .agent-trace li {
     grid-template-columns: 1fr;
     gap: 8px;
   }

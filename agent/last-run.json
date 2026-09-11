@@ -1,0 +1,77 @@
+{
+  "ran_at": "2026-09-11T06:13:18Z",
+  "author": "gyanu2507",
+  "steps": [
+    {
+      "tool": "plan",
+      "ok": true,
+      "detail": "search merged PRs, rank agent/MCP/RAG/inference first, patch the OSS list"
+    },
+    {
+      "tool": "search_merged_prs",
+      "ok": true,
+      "detail": "31 merged PRs"
+    },
+    {
+      "tool": "rank_agentic",
+      "ok": true,
+      "detail": "kept 7 of 8 repos"
+    },
+    {
+      "tool": "patch_index",
+      "ok": true,
+      "detail": "wrote 7 rows"
+    }
+  ],
+  "picks": [
+    {
+      "repo": "ag-ui-protocol/ag-ui",
+      "number": 2715,
+      "title": "fix(mastra): emit TOOL_CALL triple before RESULT on resume of a suspended tool",
+      "url": "https://github.com/ag-ui-protocol/ag-ui/pull/2715",
+      "score": 100
+    },
+    {
+      "repo": "github/spec-kit",
+      "number": 4402,
+      "title": "docs: resolve assess clarifications by editing artifacts in place",
+      "url": "https://github.com/github/spec-kit/pull/4402",
+      "score": 96
+    },
+    {
+      "repo": "punkpeye/fastmcp",
+      "number": 358,
+      "title": "Emit WWW-Authenticate on 401 when authenticate() fails with no OAuth config",
+      "url": "https://github.com/punkpeye/fastmcp/pull/358",
+      "score": 92
+    },
+    {
+      "repo": "deepset-ai/haystack",
+      "number": 12624,
+      "title": "Raise a clear error when type routers reuse reserved output names",
+      "url": "https://github.com/deepset-ai/haystack/pull/12624",
+      "score": 88
+    },
+    {
+      "repo": "ml-explore/mlx-lm",
+      "number": 1848,
+      "title": "Rebind BatchKVCache offset instead of mutating in place.",
+      "url": "https://github.com/ml-explore/mlx-lm/pull/1848",
+      "score": 84
+    },
+    {
+      "repo": "Chainlit/chainlit",
+      "number": 3017,
+      "title": "Fail CI when a pnpm.overrides pin is declared but never applied",
+      "url": "https://github.com/Chainlit/chainlit/pull/3017",
+      "score": 80
+    },
+    {
+      "repo": "pydantic/logfire",
+      "number": 2308,
+      "title": "Keep tail-sampling buffers until every span in the trace has ended",
+      "url": "https://github.com/pydantic/logfire/pull/2308",
+      "score": 40
+    }
+  ]
+}
