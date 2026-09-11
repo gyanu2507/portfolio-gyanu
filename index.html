@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gyanu Mayank — generative AI engineer. RAG, LLM serving, multi-cloud infrastructure, and upstream open-source work." />
+  <meta name="description" content="Gyanu Mayank. Agentic systems, MCP, HITL resume, RAG, and upstream patches in the libraries those loops run on." />
   <meta name="theme-color" content="#04050a" />
-  <meta property="og:title" content="Gyanu Mayank · Generative AI Engineer" />
-  <meta property="og:description" content="RAG, LLM serving, multi-cloud infrastructure. Open-source contributor across Python, Go, and TypeScript." />
+  <meta property="og:title" content="Gyanu Mayank · Agentic AI" />
+  <meta property="og:description" content="Planners, tool loops, MCP, and retrieval. Open-source work on AG-UI, Spec Kit, FastMCP, Haystack, and mlx-lm." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://portfolio-gyanu.vercel.app/" />
   <meta property="og:image" content="https://portfolio-gyanu.vercel.app/Gyanu.jpg" />
-  <title>Gyanu Mayank · Generative AI Engineer</title>
+  <title>Gyanu Mayank · Agentic AI</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0e1d'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='32' font-family='system-ui' fill='%237fb3ff'%3EG%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,11 +40,11 @@
 
       <section class="hero">
         <div class="hero-copy">
-          <p class="tag">Generative AI · Open source</p>
-          <h1>RAG, LLM serving, and multi-cloud infrastructure.</h1>
+          <p class="tag">Agentic AI · Open source</p>
+          <h1>Agents that call tools, pause, and resume without dropping the call.</h1>
           <p class="lead">
-            I build retrieval systems and inference pipelines, then ship them on AWS, Azure, and GCP.
-            I also send tested patches upstream — Python, Go, and TypeScript — instead of working around the bugs.
+            Planners, tool loops, MCP, HITL resume, and the RAG those loops retrieve from.
+            I patch the libraries they run on when the protocol or the serving path is wrong.
           </p>
           <div class="actions">
             <a class="btn primary" href="#oss">Open-source work</a>
@@ -64,10 +64,10 @@
             </div>
             <figcaption>
               <p class="profile-name">Gyanu Mayank</p>
-              <p class="profile-role">Generative AI Engineer</p>
+              <p class="profile-role">Agentic AI engineer</p>
               <ul class="profile-highlights">
                 <li>B.Tech CSE, NIT Patna · Pune</li>
-                <li>RAG, vector search, Terraform deploys</li>
+                <li>Tool loops, MCP, HITL, RAG</li>
                 <li>CodeChef 4★ · LeetCode Knight</li>
               </ul>
             </figcaption>
@@ -82,15 +82,15 @@
       <div class="frame split">
         <div>
           <p class="eyebrow">About</p>
-          <h2>Engineer first. Models are the current problem set.</h2>
+          <h2>The loop is the product: plan, call tools, pause, resume, cite.</h2>
         </div>
         <div class="content">
           <p>
-            I work on generative AI products: document retrieval, embedding pipelines, and getting models into production without the usual pile of glue.
-            Competitive programming is how I got used to reading other people’s code and finding the actual bug.
+            An agent is a planner, a set of tools, a way to pause for a human, and a trace of what it did.
+            I build those pieces, then the retrieval they sit on. Competitive programming is how I got used to reading someone else's code and finding the actual bug.
           </p>
           <p>
-            NIT Patna, Computer Science. I contribute to libraries I depend on — parsers, servers, tracing, CLIs — with a regression test on each patch.
+            NIT Patna, Computer Science. Merged patches in AG-UI, GitHub Spec Kit, FastMCP, Haystack, and mlx-lm, each with a regression test.
           </p>
           <div class="stats">
             <article>
@@ -153,7 +153,7 @@
             </header>
             <ul>
               <li>Acoustic classification models above 80% accuracy.</li>
-              <li>Worked through Whisper model layers; about a 20% lift in prediction quality.</li>
+              <li>Worked through Whisper model layers. About a 20% lift in prediction quality.</li>
             </ul>
           </article>
           <article>
@@ -173,38 +173,38 @@
     <section class="section oss" id="oss">
       <div class="frame">
         <p class="eyebrow">Open source</p>
-        <h2>Merged patches in libraries other people ship.</h2>
+        <h2>Merged patches in the stacks agents actually use.</h2>
         <p class="section-lead">
-          Small, scoped fixes with a test. The names live in the table so the intro does not have to repeat them.
+          HITL resume, spec-driven workflows, MCP auth, retrieval routers, inference caches. Each change has a test.
         </p>
         <ul class="oss-list">
           <li>
-            <a href="https://github.com/Chainlit/chainlit/pull/3017" target="_blank" rel="noopener noreferrer">Chainlit</a>
-            <span>CI fails when a dependency override is declared but never applied</span>
+            <a href="https://github.com/ag-ui-protocol/ag-ui/pull/2715" target="_blank" rel="noopener noreferrer">AG-UI</a>
+            <span>Mastra resume emits the <code>TOOL_CALL</code> triple before <code>RESULT</code>, so the client still has the tool</span>
+          </li>
+          <li>
+            <a href="https://github.com/github/spec-kit/pull/4401" target="_blank" rel="noopener noreferrer">Spec Kit</a>
+            <span>Drop the unused <code>scope</code> input from the bundled SDD workflow. Clarifications edit the artifact in place.</span>
+          </li>
+          <li>
+            <a href="https://github.com/punkpeye/fastmcp/pull/358" target="_blank" rel="noopener noreferrer">FastMCP</a>
+            <span>Send <code>WWW-Authenticate</code> on 401 when <code>authenticate()</code> fails with no OAuth config</span>
+          </li>
+          <li>
+            <a href="https://github.com/deepset-ai/haystack/pull/12624" target="_blank" rel="noopener noreferrer">Haystack</a>
+            <span>Type routers reject reserved output names instead of failing later</span>
+          </li>
+          <li>
+            <a href="https://github.com/ml-explore/mlx-lm/pull/1777" target="_blank" rel="noopener noreferrer">mlx-lm</a>
+            <span>Prefill tokens reach logits processors. Rebind <code>BatchKVCache</code> offset instead of mutating it.</span>
           </li>
           <li>
             <a href="https://github.com/benoitc/gunicorn/pull/3715" target="_blank" rel="noopener noreferrer">Gunicorn</a>
             <span>Stop writing a 500 over a response that already started</span>
           </li>
           <li>
-            <a href="https://github.com/django-extensions/django-extensions/pull/1997" target="_blank" rel="noopener noreferrer">django-extensions</a>
-            <span><code>print-sql</code> no longer crashes when the last query is missing</span>
-          </li>
-          <li>
             <a href="https://github.com/pydantic/logfire/pull/2308" target="_blank" rel="noopener noreferrer">Logfire</a>
-            <span>Keep traces until every span in them has finished</span>
-          </li>
-          <li>
-            <a href="https://github.com/Python-Markdown/markdown/pull/1625" target="_blank" rel="noopener noreferrer">Python-Markdown</a>
-            <span>Parse inline code by walking spans instead of a brittle regex</span>
-          </li>
-          <li>
-            <a href="https://github.com/Pylons/waitress/pull/506" target="_blank" rel="noopener noreferrer">Waitress</a>
-            <span>Don’t kill the event loop when a closed socket returns <code>EBADF</code></span>
-          </li>
-          <li>
-            <a href="https://github.com/sloria/environs/pull/487" target="_blank" rel="noopener noreferrer">environs</a>
-            <span>Return <code>None</code> for invalid values when eager parsing is off</span>
+            <span>Tail sampling keeps the buffer until every span in the trace has ended</span>
           </li>
         </ul>
         <p class="oss-more">
@@ -216,18 +216,18 @@
     <section class="section projects" id="projects">
       <div class="frame">
         <p class="eyebrow">Projects</p>
-        <h2>Things you can open and run.</h2>
+        <h2>Agents, retrieval, and the serving path.</h2>
         <div class="project-grid">
           <article class="project-card">
             <header>
-              <span class="pill">Agent · GitHub</span>
+              <span class="pill">Agent · MCP</span>
               <span class="year">2026</span>
             </header>
             <h3>Workspace Brief</h3>
-            <p>Ask a live GitHub workspace what changed — planner, tool loop, BM25, citations, FastAPI, Docker.</p>
+            <p>Ask a live GitHub workspace what changed. Planner, tool loop, BM25, citations, FastAPI, MCP, Docker.</p>
             <ul>
-              <li>Answers only from retrieved issues, PRs, and commits, with a json trace of every tool call.</li>
-              <li>CLI, HTTP API, and MCP over the same tools; retries and secret redaction on the GitHub path.</li>
+              <li>Answers only from retrieved issues, PRs, and commits, with a JSON trace of every tool call.</li>
+              <li>CLI, HTTP API, and MCP over the same tools. Retries and secret redaction on the GitHub path.</li>
             </ul>
             <footer>
               <a href="https://github.com/gyanu2507/workspace-brief" target="_blank" rel="noopener noreferrer">Code</a>
@@ -239,28 +239,13 @@
               <span class="year">2025</span>
             </header>
             <h3>Advanced RAG</h3>
-            <p>Document Q&amp;A over PDF, DOCX, CSV and more — chunking, auth, Streamlit UI, Docker.</p>
+            <p>Document Q&amp;A over PDF, DOCX, CSV and more. Chunking, auth, Streamlit UI, Docker.</p>
             <ul>
               <li>Multi-format ingest and retrieval, not a single-PDF demo.</li>
               <li>Packaged for deploy (Dockerfile, compose).</li>
             </ul>
             <footer>
               <a href="https://github.com/gyanu2507/advanced-rag" target="_blank" rel="noopener noreferrer">Code</a>
-            </footer>
-          </article>
-          <article class="project-card">
-            <header>
-              <span class="pill">LLM · Streamlit</span>
-              <span class="year">2025</span>
-            </header>
-            <h3>LinkedIn Post Generator</h3>
-            <p>Few-shot post generation from a curated dataset, with Groq in the loop.</p>
-            <ul>
-              <li>Layered Python app: UI, generation, and data kept apart.</li>
-              <li>Topic, language, and length as first-class controls.</li>
-            </ul>
-            <footer>
-              <a href="https://github.com/gyanu2507/Linkedin-Posts-Generator" target="_blank" rel="noopener noreferrer">Code</a>
             </footer>
           </article>
           <article class="project-card">
@@ -281,48 +266,17 @@
           </article>
           <article class="project-card">
             <header>
-              <span class="pill">React · Editor</span>
-              <span class="year">2023</span>
+              <span class="pill">LLM · Streamlit</span>
+              <span class="year">2025</span>
             </header>
-            <h3>CloudCode</h3>
-            <p>In-browser HTML / CSS / JS editor with live preview, built on CodeMirror.</p>
+            <h3>LinkedIn Post Generator</h3>
+            <p>Few-shot post generation from a curated dataset, with Groq in the loop.</p>
             <ul>
-              <li>Three panes, one preview — the usual sandbox loop.</li>
-              <li>Deployed on Vercel.</li>
+              <li>Layered Python app: UI, generation, and data kept apart.</li>
+              <li>Topic, language, and length as first-class controls.</li>
             </ul>
             <footer>
-              <a href="https://cloud-code.vercel.app/" target="_blank" rel="noopener noreferrer">Demo</a>
-              <a href="https://github.com/gyanu2507/CloudCode" target="_blank" rel="noopener noreferrer">Code</a>
-            </footer>
-          </article>
-          <article class="project-card">
-            <header>
-              <span class="pill">React · Firebase</span>
-              <span class="year">2023</span>
-            </header>
-            <h3>Document Editor</h3>
-            <p>Docs-style editor: create and open documents, persisted in Firebase.</p>
-            <ul>
-              <li>React Router for list vs editor views.</li>
-              <li>Documents stored remotely, not only in localStorage.</li>
-            </ul>
-            <footer>
-              <a href="https://github.com/gyanu2507/Document-Editor" target="_blank" rel="noopener noreferrer">Code</a>
-            </footer>
-          </article>
-          <article class="project-card">
-            <header>
-              <span class="pill">Python · Desktop</span>
-              <span class="year">2023</span>
-            </header>
-            <h3>Disk Analyzer</h3>
-            <p>Tkinter tool for disk cleanup: duplicates, large files, temp files, rarely used files.</p>
-            <ul>
-              <li>Duplicate detection by MD5 hash.</li>
-              <li>Desktop GUI, not a CLI dump.</li>
-            </ul>
-            <footer>
-              <a href="https://github.com/gyanu2507/Disk-Analyzer" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://github.com/gyanu2507/Linkedin-Posts-Generator" target="_blank" rel="noopener noreferrer">Code</a>
             </footer>
           </article>
         </div>
@@ -337,12 +291,12 @@
         </div>
         <div class="content">
           <ul class="badge-list">
-            <li><strong>CodeChef</strong> — 4★, peak 1917</li>
-            <li><strong>Codeforces</strong> — Specialist, peak 1455</li>
-            <li><strong>LeetCode</strong> — Knight, 1000+ problems</li>
-            <li><strong>Scaler HACKX 2021</strong> — 44 / 15,500</li>
-            <li><strong>Google Kick Start 2022</strong> — rank 1264, Round H</li>
-            <li><strong>TechGig Code Gladiators 2023</strong> — finalist, 150k+ field</li>
+            <li><strong>CodeChef</strong>: 4★, peak 1917</li>
+            <li><strong>Codeforces</strong>: Specialist, peak 1455</li>
+            <li><strong>LeetCode</strong>: Knight, 1000+ problems</li>
+            <li><strong>Scaler HACKX 2021</strong>: 44 / 15,500</li>
+            <li><strong>Google Kick Start 2022</strong>: rank 1264, Round H</li>
+            <li><strong>TechGig Code Gladiators 2023</strong>: finalist, 150k+ field</li>
           </ul>
         </div>
       </div>
@@ -357,14 +311,14 @@
         <div class="content">
           <p>B.Tech in Computer Science &amp; Engineering · CGPA 8.25 · Dec 2020 – May 2024</p>
           <div class="skill-tags">
-            <span>Python</span>
-            <span>C++</span>
-            <span>TypeScript</span>
+            <span>Agent loops</span>
+            <span>MCP</span>
+            <span>HITL</span>
             <span>RAG</span>
+            <span>Python</span>
+            <span>TypeScript</span>
             <span>AWS / Azure / GCP</span>
-            <span>Terraform</span>
             <span>Docker</span>
-            <span>React</span>
           </div>
         </div>
       </div>
@@ -377,7 +331,7 @@
         <p class="eyebrow">Contact</p>
         <h2>Email is the fastest way.</h2>
         <p class="footer-copy">
-          Open to engineering roles around RAG, LLM serving, and backend systems.
+          Open to engineering roles around agent systems, MCP, RAG, and LLM serving.
         </p>
         <div class="footer-actions">
           <a class="btn primary" href="mailto:viratmayank2507@gmail.com">Email me</a>
